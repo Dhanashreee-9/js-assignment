@@ -1,33 +1,31 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <h1>This is my first Code in Javascript</h1>
-  <title>>LetsUpgrade JS</title>>
-</head>
+    <head>
+        <title>Assignment 1</title>
+    </head>
+    <body>
+        <h1>Assignment 1 solution</h1>
+        <script>
+            var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+            var today = new Date();
+            var day = today.getDay();
+            var hours = today.getHours();
+            var ampm = hours >= 12 ? 'pm' : 'am';
+            hours = hours % 12;
+            if(hours < 10){
+                hours = "0"+hours;
+            }
+            var minutes = today.getMinutes();
+            if(minutes<10){
+                minutes="0"+minutes;
+            }
+            var seconds = today.getSeconds();
+            if(seconds < 10){
+                seconds = "0"+seconds;
+            }
+            document.write("Today is: "+daylist[day]+"\n");
+            document.write("<br />");
+            document.write("Current Time: "+ hours +" " + ampm + " : " +minutes+ " : " + seconds);
+        </script>
+    </body>
 
-<body>
-  
-<script>
-    var myDate = new Date(); 
-        var myDay = myDate.getDay(); 
-  
-  var weekday = ['Sunday', 'Monday', 'Tuesday', 
-            'Wednesday', 'Thursday', 'Friday', 'Saturday' 
-        ]; 
-  document.write("Today is : " + weekday[myDay]); 
-  
-  var hours = myDate.getHours(); 
-        var ampm = hours >= 12 ? 'PM' : 'AM'; 
-        hours = hours % 12; 
-        hours = hours ? hours : 12; 
-        var minutes = myDate.getMinutes(); 
-        minutes = minutes < 10 ? '0' + minutes : minutes; 
-        var myTime = hours + " " + ampm + " : " + minutes +  
-            " : " + myDate.getMilliseconds(); 
-        document.write("\tCurrent time is : " + myTime);
- 
-    </script>
-  </body>
 </html>
